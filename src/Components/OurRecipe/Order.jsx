@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import WtCook from './WtCook';
 import Preparing from './Preparing';
 
-const Order = ({recipe}) => {
+const Order = ({recipe, removeItem}) => {
     const [recipes, setRecipe] = useState([]);
     const [time, setTime] = useState(0);
     const [calories, setCalories] = useState(0);
@@ -35,7 +35,7 @@ const Order = ({recipe}) => {
                             <tbody>
                             {/* row 1 */}
                             {
-                                recipe.map((recipe,index)=><WtCook preparing ={preparing} index={index} recipe = {recipe}></WtCook>)
+                                recipe.map((recipe,index)=><WtCook preparing ={preparing} index={index} removeItem={removeItem} recipe = {recipe}></WtCook>)
                             }
                             </tbody>
                         </table>
