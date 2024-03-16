@@ -19,7 +19,7 @@ const Header = () => {
                         </div>
                     </ul>
                     </div>
-                    <a className="btn btn-ghost text-2xl lexend font-bold md:text-[32px]">Recipe Calories</a>
+                    <a className="btn btn-ghost hover:bg-transparent text-2xl lexend font-bold md:text-[32px]">Recipe Calories</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 lexend font-normal text-[16px] text-[#5B546B]">
@@ -41,8 +41,8 @@ const Header = () => {
             <div className="hero rounded-[24px] bg-cover bg-no-repeat" style={{backgroundImage: 'url(https://i.ibb.co/L8xcWfP/Rectangle-1.jpg)'}}>
                 <div className="p-5">
                     <div className="text-center">
-                        <h1 className='lexend max-w-[897px] pt-10 md:pt-[130px] font-bold text-[37px] md:text-[52px] text-[#FFFFFF]'>Discover an exceptional cooking class tailored for you!</h1>
-                        <p className='lexend m-auto text-[16px] md:text-[18px] text-[#FFFFFF] max-w-[933px] mt-[24px] mb-[40px]'>Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
+                        <h1 className='lexend max-w-[897px] pt-10 md:pt-[130px] font-bold text-[37px] md:text-[52px] text-[#FFFFFF]'>Discover Delectable Dining - Your Gastronomic Escape</h1>
+                        <p className='lexend m-auto text-[16px] md:text-[18px] text-[#FFFFFF] max-w-[933px] mt-[24px] mb-[40px]'>Embark on a journey of taste with us. Our restaurant offers a welcoming atmosphere and a diverse menu of mouthwatering dishes. Come experience culinary excellence and create unforgettable memories with family and friends.</p>
                         <div className='pb-10 md:pb-[130px] flex flex-col justify-center items-center gap-5 text-center md:flex-row'>
                             <button className='font-semibold w-[170px] h-[60px] md:w-[187px] md:h-[65px] lexend md:text-[20px] text-[#150B2B] bg-[#0BE58A] border-2 border-[#0BE58A] rounded-[50px]'>Explore Now</button>
                             <button className='font-semibold w-[170px] h-[60px] md:w-[201px] md:h-[65px] lexend md:text-[20px] text-[#FFFFFF] bg-transparent border-2 border-[#FFFFFF] rounded-[50px]'>Our Feedback</button>

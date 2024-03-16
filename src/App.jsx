@@ -21,14 +21,14 @@ function App() {
   }
   return (
     <>
-      <div className='max-w-[1320px] m-auto px-5'>
+      <div className='max-w-[1320px] m-auto px-5 mb-10 md:mb-20'>
       <div>
         <ToastContainer />
       </div>
         <Header></Header>
         <div className='m-auto text-center max-w-[823px] mt-10 mb-5 md:mt-[100px] md:mb-[50px]'>
           <h1 className='lexend font-semibold text-[30px] md:text-[40px]'>Our Recipes</h1>
-          <p className='lexend text-[14px] md:text-[16px] font-normal'>Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget urna volutpat curabitur elementum mauris aenean neque. </p>
+          <p className='lexend text-[14px] md:text-[16px] font-normal'>Dive into a world of culinary wonders! From timeless classics to innovative creations, our recipes promise to tantalize your taste buds and inspire your culinary adventures.</p>
         </div>
         <div className='grid grid-cols-10 gap-[24px]'>
           <Recipe wantToCook={wantToCook}></Recipe>
