@@ -4,7 +4,7 @@ import { MdOutlineLocalFireDepartment } from "react-icons/md";
 const RecipeItem = ({recipe,wantToCook}) => {
     const {recipe_id, recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = recipe;
     return (
-        <div className='border p-[24px] rounded-[16px] col-span-5'>
+        <div className='border p-[24px] rounded-[16px] col-span-10 lg:col-span-5'>
                 <img className='w-full h-[200px] rounded-[16px]' src={recipe_image} alt="" />
                 <div>
                     <h1 className='lexend font-semibold text-[20px] mt-[24px]'>{recipe_name}</h1>

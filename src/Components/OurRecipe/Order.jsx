@@ -15,7 +15,7 @@ const Order = ({recipe, removeItem}) => {
         setCalories(addCalories);
     }
     return (
-        <div className='col-span-4'>
+        <div className='col-span-10 md:col-span-5 lg:col-span-4'>
             <div className='border rounded-[16px]'>
                 <div>
                     <div className='flex justify-center'>

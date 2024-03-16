@@ -8,7 +8,7 @@ const Recipe = ({wantToCook}) => {
         .then(data => setRecipe(data));
     },[])
     return (
-        <div className='col-span-6'>
+        <div className='col-span-10 md:col-span-5 lg:col-span-6'>
             <div className='grid grid-cols-10 gap-[24px]'>
                 {
                     recipe.map((recipe, index)  => <RecipeItem wantToCook={wantToCook} index={index} recipe={recipe}></RecipeItem>)
