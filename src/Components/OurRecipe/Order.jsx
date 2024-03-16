@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import WtCook from './WtCook';
+import Preparing from './Preparing';
 
-const Order = () => {
+const Order = ({recipe}) => {
+    const [recipes, setRecipe] = useState([]);
+    const [time, setTime] = useState(0);
+    const [calories, setCalories] = useState(0);
+    const preparing = (recipe) =>{
+        const newRecipe = [...recipes, recipe];
+        setRecipe(newRecipe);
+        const addTime = Number(time) + Number(recipe.preparing_time);
+        setTime(addTime);
+        const addCalories = Number(calories) + Number(recipe.calories);
+        setCalories(addCalories);
+    }
     return (
         <div className='col-span-4'>
             <div className='border rounded-[16px]'>
                 <div>
                     <div className='flex justify-center'>
-                        <h1 className='lexend px-[74px] pb-[16px] mt-[32px] mb-[16px] font-semibold text-[24px] text-center border-b'>Want to cook: 01</h1>
+                        <h1 className='lexend px-[74px] pb-[16px] mt-[32px] mb-[16px] font-semibold text-[24px] text-center border-b'>Want to cook: {recipe.length}</h1>
                     </div>
                     <div className="overflow-x-auto">
                         <table className="table">
@@ -21,21 +34,16 @@ const Order = () => {
                             </thead>
                             <tbody>
                             {/* row 1 */}
-                            <tr className="bg-base-200 fira font-normal text-[16px] leading-6 text-[#676767]">
-                                <th className='py-[20px]'>1</th>
-                                <td>Chicken Caesar Salad</td>
-                                <td>20 minutes</td>
-                                <td>400 calories</td>
-                                <td><button className='py-[9px] px-[18px] rounded-[50px] bg-[#0BE58A] lexend font-normal text-[16px] text-[#150B2B]'>Preparing</button></td>
-                            </tr>
-                            
+                            {
+                                recipe.map((recipe,index)=><WtCook preparing ={preparing} index={index} recipe = {recipe}></WtCook>)
+                            }
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div>
                     <div className='flex justify-center'>
-                        <h1 className='lexend px-[74px] pb-[16px] mt-[32px] mb-[16px] font-semibold text-[24px] text-center border-b'>Currently cooking: 02</h1>
+                        <h1 className='lexend px-[74px] pb-[16px] mt-[32px] mb-[16px] font-semibold text-[24px] text-center border-b'>Currently cooking: {recipes.length}</h1>
                     </div>
                     <div className="overflow-x-auto">
                         <table className="table">
@@ -50,23 +58,14 @@ const Order = () => {
                             </thead>
                             <tbody>
                             {/* row 1 */}
-                            <tr className="bg-base-200 fira font-normal text-[16px] leading-6 text-[#676767]">
-                                <th className='py-[20px]'>1</th>
-                                <td>Chicken Caesar Salad</td>
-                                <td>20 minutes</td>
-                                <td>400 calories</td>
-                            </tr>
-                            <tr className="bg-base-200 fira font-normal text-[16px] leading-6 text-[#676767]">
-                                <th className='py-[20px]'>1</th>
-                                <td>Chicken Caesar Salad</td>
-                                <td>20 minutes</td>
-                                <td>400 calories</td>
-                            </tr>
+                            {
+                                recipes.map((recipes,index)=><Preparing index={index} recipes={recipes}></Preparing>)
+                            }
                             </tbody>
                         </table>
                         <div className='flex justify-end lexend font-medium text-[16px] text-[#535353] mt-[16px] mb-[121px] gap-[20px] mr-[19px]'>
-                            <h1 className='w-[101px]'>Total Time = 45 minutes</h1>
-                            <h1 className='w-[127px]'>Total Calories = 1050 calories</h1>
+                            <h1 className='w-[101px]'>Total Time = {time} minutes</h1>
+                            <h1 className='w-[127px]'>Total Calories = {calories} calories</h1>
                         </div>
                     </div>
                 </div>

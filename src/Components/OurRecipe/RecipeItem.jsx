@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoClock } from "react-icons/go";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
-const RecipeItem = ({recipe}) => {
+const RecipeItem = ({recipe,wantToCook}) => {
     const {recipe_id, recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = recipe;
     return (
         <div className='border p-[24px] rounded-[16px] col-span-5'>
@@ -32,7 +32,7 @@ const RecipeItem = ({recipe}) => {
                     </div>
                 </div>
                 <div>
-                    <button className='lexend font-medium bg-[#0BE58A] text-[18px] px-[24px] py-[13px] rounded-[50px]'>Want to Cook</button>
+                    <button onClick={()=>wantToCook(recipe)} className='lexend font-medium bg-[#0BE58A] text-[18px] px-[24px] py-[13px] rounded-[50px]'>Want to Cook</button>
                 </div>
         </div>
     );
